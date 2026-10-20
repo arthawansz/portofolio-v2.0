@@ -29,14 +29,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* LOGO BRAND */}
+
         <Link href="/" className="flex items-center gap-1 group">
-          <span className="font-extrabold text-2xl tracking-tighter text-white group-hover:text-[#FF1E27] transition-colors">
-            MONZY<span className="text-[#FF1E27]">.V2</span>
+          <span className="font-extrabold text-4xl tracking-tighter text-white transition-colors">
+            A<span className="text-[#FF1E27]">P</span>
           </span>
         </Link>
 
-        {/* CENTER NAVIGATION PILL */}
         <nav className="hidden md:flex items-center bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-lg">
           <ul className="flex items-center gap-8 text-xs font-semibold tracking-widest text-zinc-400">
             <li>
@@ -74,7 +73,6 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* RIGHT CTA BUTTON */}
         <div>
           <Link
             href="#contact"
