@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
-  // Efek transparan/blur saat di-scroll
+  // Efek transparan/blur pas layar di-scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
