@@ -38,7 +38,7 @@ export default function Hero() {
         >
           <FaGithub className="w-5 h-5" />
         </a>
-        <div className="w-[1px] h-16 bg-zinc-700 mt-2"></div>
+        <div className="w-[1px] h-16 mt-2"></div>
       </div>
 
       {/* 3. CENTERED HERO CONTENT (TYPOGRAPHY MASK + PORTRAIT) */}
@@ -65,8 +65,6 @@ export default function Hero() {
 
       </div>
 
-      {/* 4. BOTTOM CURVED TRANSITION BORDER */}
-      <div className="absolute bottom-0 left-0 right-0 h-12 bg-[#F4F4F5] rounded-t-[40px] md:rounded-t-[80px] z-30"></div>
 
     </section>
   );
