@@ -7,10 +7,10 @@ export default function Hero() {
     <section id="home" className="relative h-screen w-full bg-[#09090B] flex items-center justify-center overflow-hidden pt-20">
       
       {/* 1. BACKGROUND GLOW RED NEON */}
-      <div className="absolute w-[500px] h-[500px] bg-[#FF1E27]/15 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute w-[500px] h-[500px] bg-[#FF1E27]/25 rounded-full blur-[120px] pointer-events-none"></div>
 
       {/* 2. LEFT VERTICAL SOCIAL SIDEBAR */}
-      <div className="absolute left-6 bottom-10 hidden md:flex flex-col items-center gap-6 z-30 text-zinc-400">
+      <div className="absolute left-6 bottom-60 hidden md:flex flex-col items-center gap-6 z-30 text-zinc-400">
         <a 
           href="https://instagram.com" 
           target="_blank" 
@@ -38,7 +38,6 @@ export default function Hero() {
         >
           <FaGithub className="w-5 h-5" />
         </a>
-        <div className="w-[1px] h-16 mt-2"></div>
       </div>
 
       {/* 3. CENTERED HERO CONTENT (TYPOGRAPHY MASK + PORTRAIT) */}

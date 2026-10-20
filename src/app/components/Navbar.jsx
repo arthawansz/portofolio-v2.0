@@ -36,7 +36,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-lg">
+        <nav className="hidden md:flex items-center px-6 py-2 rounded-full backdrop-blur-lg">
           <ul className="flex items-center gap-8 text-xs font-semibold tracking-widest text-zinc-400">
             <li>
               <Link
