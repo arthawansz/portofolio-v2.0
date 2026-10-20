@@ -2,6 +2,7 @@ import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
 import Projects from "@/app/components/Projects";
+import Certificates from "@/app/components/Certificates";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
-
+      <Certificates />
     </main>
   );
 }

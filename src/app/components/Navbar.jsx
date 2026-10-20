@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -36,7 +37,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center px-6 py-2 rounded-full backdrop-blur-lg">
+        <nav className="hidden md:flex items-center px-6 py-2 rounded-full">
           <ul className="flex items-center gap-8 text-xs font-semibold tracking-widest text-zinc-400">
             <li>
               <Link
@@ -64,6 +65,14 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                href="#certificates"
+                className="hover:text-white transition-colors duration-200"
+              >
+                CERTIFICATE
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="#contact"
                 className="hover:text-white transition-colors duration-200"
               >
@@ -76,9 +85,10 @@ export default function Navbar() {
         <div>
           <Link
             href="#contact"
-            className="px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#FF1E27] hover:bg-red-700 hover:shadow-[0_0_20px_rgba(255,30,39,0.5)] transition-all duration-300 border border-red-500/30"
+            className="px-5 py-2.5 flex gap-2 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#FF1E27] hover:bg-red-700 hover:shadow-[0_0_20px_rgba(255,30,39,0.5)] transition-all duration-300 border border-red-500/30"
           >
-            Contact Me
+            <MdOutlineAdminPanelSettings className="text-[1rem]" /> log in as admin
+
           </Link>
         </div>
       </div>

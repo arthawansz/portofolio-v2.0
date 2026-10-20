@@ -40,8 +40,8 @@ export default function About() {
                 <p className="text-zinc-900 font-extrabold text-sm">ARTHAWAN PRATAMA</p>
               </div>
               <div>
-                <p className="text-zinc-400 text-[10px]">Location</p>
-                <p className="text-zinc-900 font-extrabold text-sm">BANDUNG, WEST JAVA</p>
+                <p className="text-zinc-400 text-[10px]">From</p>
+                <p className="text-zinc-900 font-extrabold text-sm">MAKASSAR, WEST SULAWESI</p>
               </div>
               <div>
                 <p className="text-zinc-400 text-[10px]">Specialization</p>
