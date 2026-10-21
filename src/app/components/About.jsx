@@ -59,7 +59,7 @@ export default function About() {
               <div>
                 <p className="text-zinc-400 text-[10px]">Specialization</p>
                 <p className="text-zinc-900 font-extrabold text-sm">
-                  FULL-STACK DEVELOPER
+                  FULL-STACK WEB DEVELOPER
                 </p>
               </div>
               <div>
