@@ -1,9 +1,17 @@
 import React from "react";
 import {
+  SiHtml5,
+  SiCss,
   SiJavascript,
   SiReact,
+  SiVuedotjs,
   SiNextdotjs,
+  SiNuxt,
+  SiVite,
   SiTailwindcss,
+  SiBootstrap,
+  SiPhp,
+  SiLaravel,
   SiNodedotjs,
   SiGit,
   SiGithub,
@@ -103,6 +111,14 @@ export default function About() {
                   </h3>
                 </div>
                 <div className="flex flex-wrap gap-4 text-3xl text-zinc-700">
+                  <SiHtml5
+                    className="hover:text-[#E34F26] transition-colors"
+                    title="HTML5"
+                  />
+                  <SiCss
+                    className="hover:text-[#1572B6] transition-colors"
+                    title="CSS3"
+                  />
                   <SiJavascript
                     className="hover:text-[#F7DF1E] transition-colors"
                     title="JavaScript"
@@ -111,13 +127,37 @@ export default function About() {
                     className="hover:text-[#61DAFB] transition-colors"
                     title="React"
                   />
+                  <SiVuedotjs
+                    className="hover:text-[#4FC08D] transition-colors"
+                    title="Vue.js"
+                  />
                   <SiNextdotjs
                     className="hover:text-black transition-colors"
                     title="Next.js"
                   />
+                  <SiNuxt
+                    className="hover:text-[#00DC82] transition-colors"
+                    title="Nuxt.js"
+                  />
+                  <SiVite
+                    className="hover:text-[#646CFF] transition-colors"
+                    title="Vite"
+                  />
                   <SiTailwindcss
                     className="hover:text-[#38BDF8] transition-colors"
                     title="Tailwind CSS"
+                  />
+                  <SiBootstrap
+                    className="hover:text-[#7952B3] transition-colors"
+                    title="Bootstrap"
+                  />
+                  <SiPhp
+                    className="hover:text-[#777BB4] transition-colors"
+                    title="PHP"
+                  />
+                  <SiLaravel
+                    className="hover:text-[#FF2D20] transition-colors"
+                    title="Laravel"
                   />
                   <SiNodedotjs
                     className="hover:text-[#339933] transition-colors"
