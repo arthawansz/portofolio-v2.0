@@ -75,8 +75,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: PARAGRAPH DESCRIPTION */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
+          {/* RIGHT COLUMN: PARAGRAPH DESCRIPTION & SKILLS */}
+          <div className="lg:col-span-7 flex flex-col justify-start">
             <p className="text-lg md:text-2xl font-medium leading-relaxed text-zinc-800">
               I build scalable web applications from front to back — crafting
               clean interfaces with{" "}
@@ -91,97 +91,97 @@ export default function About() {
               competitive coding platforms, and crafting high-performance
               digital experiences.
             </p>
-          </div>
-        </div>
 
-        {/* TECH STACK & SKILLS CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
-          {/* CARD 1: SOFTWARE ENGINEER */}
-          <div className="bg-white p-8 rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center gap-3 mb-6">
-              <FaCode className="text-[#FF1E27] text-xl" />
-              <h3 className="font-bold text-sm tracking-wider uppercase text-zinc-900">
-                Software Engineer
-              </h3>
-            </div>
-            <div className="flex flex-wrap gap-4 text-3xl text-zinc-700">
-              <SiJavascript
-                className="hover:text-[#F7DF1E] transition-colors"
-                title="JavaScript"
-              />
-              <SiReact
-                className="hover:text-[#61DAFB] transition-colors"
-                title="React"
-              />
-              <SiNextdotjs
-                className="hover:text-black transition-colors"
-                title="Next.js"
-              />
-              <SiTailwindcss
-                className="hover:text-[#38BDF8] transition-colors"
-                title="Tailwind CSS"
-              />
-              <SiNodedotjs
-                className="hover:text-[#339933] transition-colors"
-                title="Node.js"
-              />
-            </div>
-          </div>
+            {/* TECH STACK & SKILLS CARDS */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
+              {/* CARD 1: SOFTWARE ENGINEER */}
+              <div className="sm:col-span-2 bg-white p-8 rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-3 mb-6">
+                  <FaCode className="text-[#FF1E27] text-xl" />
+                  <h3 className="font-bold text-sm tracking-wider uppercase text-zinc-900">
+                    Software Engineer
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-4 text-3xl text-zinc-700">
+                  <SiJavascript
+                    className="hover:text-[#F7DF1E] transition-colors"
+                    title="JavaScript"
+                  />
+                  <SiReact
+                    className="hover:text-[#61DAFB] transition-colors"
+                    title="React"
+                  />
+                  <SiNextdotjs
+                    className="hover:text-black transition-colors"
+                    title="Next.js"
+                  />
+                  <SiTailwindcss
+                    className="hover:text-[#38BDF8] transition-colors"
+                    title="Tailwind CSS"
+                  />
+                  <SiNodedotjs
+                    className="hover:text-[#339933] transition-colors"
+                    title="Node.js"
+                  />
+                </div>
+              </div>
 
-          {/* CARD 2: TOOLS & SERVER */}
-          <div className="bg-white p-8 rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center gap-3 mb-6">
-              <FaServer className="text-[#FF1E27] text-xl" />
-              <h3 className="font-bold text-sm tracking-wider uppercase text-zinc-900">
-                Tools & Server
-              </h3>
-            </div>
-            <div className="flex flex-wrap gap-4 text-3xl text-zinc-700">
-              <SiGit
-                className="hover:text-[#F05032] transition-colors"
-                title="Git"
-              />
-              <SiGithub
-                className="hover:text-black transition-colors"
-                title="GitHub"
-              />
-              <SiDocker
-                className="hover:text-[#2496ED] transition-colors"
-                title="Docker"
-              />
-              <SiVercel
-                className="hover:text-black transition-colors"
-                title="Vercel"
-              />
-              <SiFigma
-                className="hover:text-[#F24E1E] transition-colors"
-                title="Figma"
-              />
-            </div>
-          </div>
+              {/* CARD 2: TOOLS & SERVER */}
+              <div className="bg-white p-8 rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-3 mb-6">
+                  <FaServer className="text-[#FF1E27] text-xl" />
+                  <h3 className="font-bold text-sm tracking-wider uppercase text-zinc-900">
+                    Tools & Server
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-4 text-3xl text-zinc-700">
+                  <SiGit
+                    className="hover:text-[#F05032] transition-colors"
+                    title="Git"
+                  />
+                  <SiGithub
+                    className="hover:text-black transition-colors"
+                    title="GitHub"
+                  />
+                  <SiDocker
+                    className="hover:text-[#2496ED] transition-colors"
+                    title="Docker"
+                  />
+                  <SiVercel
+                    className="hover:text-black transition-colors"
+                    title="Vercel"
+                  />
+                  <SiFigma
+                    className="hover:text-[#F24E1E] transition-colors"
+                    title="Figma"
+                  />
+                </div>
+              </div>
 
-          {/* CARD 3: SOFT SKILLS */}
-          <div className="bg-white p-8 rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center gap-3 mb-6">
-              <FaUserCheck className="text-[#FF1E27] text-xl" />
-              <h3 className="font-bold text-sm tracking-wider uppercase text-zinc-900">
-                Core Abilities
-              </h3>
+              {/* CARD 3: SOFT SKILLS */}
+              <div className="bg-white p-8 rounded-3xl border border-zinc-200/80 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-3 mb-6">
+                  <FaUserCheck className="text-[#FF1E27] text-xl" />
+                  <h3 className="font-bold text-sm tracking-wider uppercase text-zinc-900">
+                    Core Abilities
+                  </h3>
+                </div>
+                <ul className="text-xs font-semibold text-zinc-600 space-y-2 uppercase tracking-wide">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]"></span>
+                    Clean Code & Fundamental Architecture
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]"></span>
+                    Problem Solving & Logic Design
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]"></span>
+                    Fast Learner & Adaptability
+                  </li>
+                </ul>
+              </div>
             </div>
-            <ul className="text-xs font-semibold text-zinc-600 space-y-2 uppercase tracking-wide">
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]"></span>
-                Clean Code & Fundamental Architecture
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]"></span>
-                Problem Solving & Logic Design
-              </li>
-              <li className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]"></span>
-                Fast Learner & Adaptability
-              </li>
-            </ul>
           </div>
         </div>
       </div>
