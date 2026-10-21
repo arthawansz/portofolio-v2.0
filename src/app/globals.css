@@ -45,3 +45,20 @@ body {
   background: #FF1E27;
   border-radius: 2px;
 }
+
+/* Navbar slide-down animation on scroll */
+@keyframes navbarSlideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-navbar-slide-down {
+  animation: navbarSlideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
