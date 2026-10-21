@@ -1,49 +1,151 @@
-import React from "react";
-import { FaExternalLinkAlt, FaGithub, FaCodeBranch } from "react-icons/fa";
+  "use client";
+
+import React, { useState } from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const projectsData = [
   {
     id: 1,
-    title: "CODEARENA (ON DEVELOPMENT)",
-    category: "Fullstack Platform / Online Judge",
-    description:
-      "Platform interactive online course + Online Judge dengan fitur Elo ranking system, matchmaking duel koding 1v1, dan real-time execution engine.",
-    tags: ["Next.js", "Node.js", "Tailwind CSS", "Docker", "WebSockets"],
+    title: "DONATE PLATFORM",
+    category: "Fullstack Platform",
+    description: "Platform donasi umat dengan fitur unggulan pengelolaan donasi, laporan real-time, dan dashboard admin.",
+    tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
     github: "https://github.com/arthawansz",
     demo: "#",
-    featured: true,
+    bgColor: "#1a1a1a",
+    accentColor: "#444",
   },
   {
     id: 2,
-    title: "SISMIOP V2",
+    title: "E-COMMERCE SYSTEM",
     category: "Enterprise Web App",
-    description:
-      "Sistem Informasi Manajemen Objek Pajak v2.0 yang dibangun untuk optimalisasi pengelolaan data dan otomatisasi workflow perpajakan.",
-    tags: ["JavaScript", "React", "Node.js", "Tailwind CSS"],
-    github: "https://github.com/arthawansz/sismiop-v2",
+    description: "Sistem e-commerce lengkap dengan manajemen order, pembayaran, dan laporan penjualan terintegrasi.",
+    tags: ["Next.js", "Node.js", "Tailwind CSS", "MySQL"],
+    github: "https://github.com/arthawansz",
     demo: "#",
-    featured: false,
+    bgColor: "#1c1c1c",
+    accentColor: "#444",
   },
   {
     id: 3,
-    title: "PORTFOLIO V2.0 (MONZY V2)",
-    category: "Personal Portfolio",
-    description:
-      "Portofolio personal berkonsep dark/red cyberpunk dengan typography masking, glassmorphism UI, dan performa tinggi.",
-    tags: ["Next.js 15", "JavaScript", "Tailwind CSS"],
-    github: "https://github.com/arthawansz/portofolio-v2.0",
+    title: "TASK MANAGEMENT",
+    category: "Productivity App",
+    description: "Aplikasi manajemen tugas dengan fitur dashboard, role management, dan tracking progress tim secara real-time.",
+    tags: ["React", "Node.js", "Tailwind CSS"],
+    github: "https://github.com/arthawansz",
     demo: "#",
-    featured: false,
+    bgColor: "#1e2a4a",
+    accentColor: "#3b5bdb",
+  },
+  {
+    id: 4,
+    title: "SCHOOL WEBSITE",
+    category: "Institutional Website",
+    description: "Website resmi sekolah dengan sistem informasi akademik, berita, dan profil sekolah yang dinamis.",
+    tags: ["PHP", "CodeIgniter", "MySQL", "Bootstrap"],
+    github: "https://github.com/arthawansz",
+    demo: "#",
+    bgColor: "#1a1a1a",
+    accentColor: "#b8860b",
   },
 ];
+
+function ProjectCard({ item }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      className="relative rounded-none overflow-hidden group cursor-pointer"
+      style={{
+        backgroundColor: item.bgColor,
+        border: "1px solid rgba(255,255,255,0.08)",
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      {/* MOCK SCREENSHOT AREA */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ height: "220px", background: item.bgColor }}
+      >
+        {/* Simulated UI preview */}
+        <div className="absolute inset-0 p-4 opacity-40">
+          <div className="w-full h-4 bg-white/10 rounded mb-2"></div>
+          <div className="w-3/4 h-3 bg-white/8 rounded mb-3"></div>
+          <div className="grid grid-cols-4 gap-2 mb-3">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="h-12 bg-white/10 rounded flex flex-col items-center justify-center gap-1">
+                <div className="w-4 h-4 bg-white/20 rounded"></div>
+                <div className="w-6 h-1.5 bg-white/15 rounded"></div>
+              </div>
+            ))}
+          </div>
+          <div className="w-full h-2 bg-white/8 rounded mb-1"></div>
+          <div className="w-5/6 h-2 bg-white/8 rounded mb-1"></div>
+          <div className="w-4/6 h-2 bg-white/8 rounded"></div>
+        </div>
+
+        {/* Accent left border */}
+        <div
+          className="absolute left-0 top-0 bottom-0 w-1"
+          style={{ backgroundColor: item.accentColor }}
+        ></div>
+
+        {/* Number badge */}
+        <div className="absolute top-3 right-3 text-[10px] font-mono text-white/30">
+          0{item.id}
+        </div>
+
+        {/* Category tag */}
+        <div className="absolute top-3 left-4 text-[10px] font-mono text-white/40 uppercase tracking-widest">
+          {item.category.toUpperCase()}
+        </div>
+
+        {/* Hover overlay */}
+        <div
+          className={`absolute inset-0 bg-[#FF1E27]/10 transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
+        ></div>
+      </div>
+
+      {/* CARD BOTTOM: Title + Actions */}
+      <div className="p-5 flex flex-col gap-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+        <h3
+          className="text-xl font-black uppercase tracking-tight text-white leading-tight transition-colors duration-300"
+          style={{ color: hovered ? "#FF1E27" : "white" }}
+        >
+          {item.title}
+        </h3>
+
+        {/* VIEW CASE + GITHUB */}
+        <div className="flex items-center gap-4">
+          <a
+            href={item.demo}
+            className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-white hover:text-[#FF1E27] transition-colors duration-200"
+          >
+            VIEW CASE <FaExternalLinkAlt className="text-[9px]" />
+          </a>
+          <a
+            href={item.github}
+            target="_blank"
+            rel="noreferrer"
+            className="text-zinc-400 hover:text-white transition-colors duration-200"
+            aria-label="GitHub"
+          >
+            <FaGithub className="text-lg" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Projects() {
   return (
     <section id="project" className="relative bg-[#09090B] text-white py-28 px-6 md:px-12 z-30">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* SECTION HEADER */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-zinc-800 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 border-b border-zinc-800 pb-8">
           <div>
             <span className="text-xs font-mono font-bold tracking-widest text-[#FF1E27] uppercase">
               [ 02 . SELECTED WORKS ]
@@ -52,81 +154,12 @@ export default function Projects() {
               FEATURED <span className="text-[#FF1E27]">PROJECTS</span>
             </h2>
           </div>
-          <p className="text-zinc-400 text-sm max-w-md mt-4 md:mt-0">
-            Kumpulan proyek pilihan yang berfokus pada arsitektur bersih, performa, dan pengalaman pengguna yang intuitif.
-          </p>
         </div>
 
-        {/* PROJECTS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 2-COLUMN PROJECT GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projectsData.map((item) => (
-            <div
-              key={item.id}
-              className={`group relative bg-zinc-900/60 border ${
-                item.featured ? "border-[#FF1E27]/50" : "border-zinc-800"
-              } rounded-3xl p-8 flex flex-col justify-between hover:border-[#FF1E27] transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,30,39,0.15)]`}
-            >
-              {/* BADGE FEATURED */}
-              {item.featured && (
-                <span className="absolute -top-3 right-6 bg-[#FF1E27] text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full border border-red-400/30">
-                  FLAGSHIP PROJECT
-                </span>
-              )}
-
-              <div>
-                {/* CATEGORY */}
-                <div className="flex items-center gap-2 text-xs font-mono text-[#FF1E27] mb-3">
-                  <FaCodeBranch />
-                  <span>{item.category}</span>
-                </div>
-
-                {/* TITLE */}
-                <h3 className="text-2xl font-black tracking-tight text-white group-hover:text-[#FF1E27] transition-colors mb-4">
-                  {item.title}
-                </h3>
-
-                {/* DESCRIPTION */}
-                <p className="text-zinc-400 text-xs md:text-sm leading-relaxed mb-6">
-                  {item.description}
-                </p>
-              </div>
-
-              <div>
-                {/* TAGS */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {item.tags.map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="text-[10px] font-semibold bg-zinc-800/80 text-zinc-300 px-2.5 py-1 rounded-md border border-zinc-700/50"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* ACTION LINKS */}
-                <div className="flex items-center gap-4 pt-4 border-t border-zinc-800/80">
-                  <a
-                    href={item.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-2 text-xs font-bold text-zinc-400 hover:text-white transition-colors"
-                  >
-                    <FaGithub className="text-base" /> Source Code
-                  </a>
-                  {item.demo !== "#" && (
-                    <a
-                      href={item.demo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-2 text-xs font-bold text-[#FF1E27] hover:underline transition-all ml-auto"
-                    >
-                      Live Demo <FaExternalLinkAlt className="text-xs" />
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={item.id} item={item} />
           ))}
         </div>
 

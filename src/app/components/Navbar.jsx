@@ -38,7 +38,7 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center px-6 py-2 rounded-full">
-          <ul className="flex items-center gap-8 text-xs font-semibold tracking-widest text-zinc-400">
+          <ul className="flex items-center gap-8 text-sm font-semibold tracking-widest text-zinc-400">
             <li>
               <Link
                 href="#home"
@@ -85,7 +85,7 @@ export default function Navbar() {
         <div>
           <Link
             href="#contact"
-            className="px-5 py-2.5 flex gap-2 rounded-md text-xs font-bold uppercase tracking-wider text-white bg-[#FF1E27] hover:bg-red-700 hover:shadow-[0_0_20px_rgba(255,30,39,0.5)] transition-all duration-300 border border-red-500/30"
+            className="px-5 py-2.5 flex gap-2 rounded-xs text-xs font-bold uppercase tracking-wider text-white border-2 border-white/10 hover:bg-[#FF1E27] hover:shadow-[0_0_20px_rgba(255,30,39,0.5)] transition-all duration-300"
           >
             <MdOutlineAdminPanelSettings className="text-[1rem]" /> log in as admin
 
